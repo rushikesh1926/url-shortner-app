@@ -1,6 +1,7 @@
 package com.rushikesh.url_shortner.controllers;
 
 import com.rushikesh.url_shortner.domain.ShortUrl;
+import com.rushikesh.url_shortner.models.ShortUrlDto;
 import com.rushikesh.url_shortner.service.ShortUrlService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +20,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-        List<ShortUrl> shortUrls = shortUrlService.findAllPublicShortUrls();
+        List<ShortUrlDto> shortUrls = shortUrlService.findAllPublicShortUrls();
         model.addAttribute("shortUrls", shortUrls);
         model.addAttribute("baseUrl", "http://localhost:8080");
         return "index";
