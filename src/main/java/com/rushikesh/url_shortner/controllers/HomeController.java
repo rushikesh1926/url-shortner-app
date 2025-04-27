@@ -1,6 +1,5 @@
 package com.rushikesh.url_shortner.controllers;
 
-import com.rushikesh.url_shortner.domain.ShortUrl;
 import com.rushikesh.url_shortner.models.ShortUrlDto;
 import com.rushikesh.url_shortner.service.ShortUrlService;
 import org.springframework.stereotype.Controller;
